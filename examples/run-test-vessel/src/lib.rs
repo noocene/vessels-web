@@ -64,7 +64,7 @@ async fn entry() {
         let mut runtime = WebRuntime;
 
         let data = runtime
-            .coalesce_framed_local::<_, _, ProtocolMveTransport<_>>(SpawnShim, resource)
+            .coalesce_framed_local::<_, _, ProtocolMveTransport>(SpawnShim, resource)
             .await
             .unwrap();
 
